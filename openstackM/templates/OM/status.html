@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>openstack服务状态</title>
+</head>
+<body>
+    <a href="/login">首页</a>
+	<h1>openstack服务状态</h1>
+    nova服务状态为<br />
+    <!--{{ contentNova.0.id }}-->
+    <table border="1" width="800" height="300" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="5%" align="center">Id</td>
+            <td width="15%" align="center">Binary</td>
+            <td width="10%" align="center">Host</td>
+            <td width="10%" align="center">Zone</td>
+            <td width="10%" align="center">Status</td>
+            <td width="10%" align="center">State</td>
+            <td width="30%" align="center">Updated_at</td>
+            <td width="10%" align="center">Disabled Reason</td>
+        </tr>
+        <tr>
+            <td align="center">{{contentNova.0.id}}</td>
+            <td align="center">{{contentNova.0.binary}}</td>
+            <td align="center">{{contentNova.0.host}}</td>
+            <td align="center">{{contentNova.0.zone}}</td>
+            <td align="center">{{contentNova.0.status}}</td>
+            <td align="center">{{contentNova.0.state}}</td>
+            <td align="center">{{contentNova.0.updated_at}}</td>
+            <td align="center">{{contentNova.0.disabled_reason}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{contentNova.1.id}}</td>
+            <td align="center">{{contentNova.1.binary}}</td>
+            <td align="center">{{contentNova.1.host}}</td>
+            <td align="center">{{contentNova.1.zone}}</td>
+            <td align="center">{{contentNova.1.status}}</td>
+            <td align="center">{{contentNova.1.state}}</td>
+            <td align="center">{{contentNova.1.updated_at}}</td>
+            <td align="center">{{contentNova.1.disabled_reason}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{contentNova.2.id}}</td>
+            <td align="center">{{contentNova.2.binary}}</td>
+            <td align="center">{{contentNova.2.host}}</td>
+            <td align="center">{{contentNova.2.zone}}</td>
+            <td align="center">{{contentNova.2.status}}</td>
+            <td align="center">{{contentNova.2.state}}</td>
+            <td align="center">{{contentNova.2.updated_at}}</td>
+            <td align="center">{{contentNova.2.disabled_reason}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{contentNova.3.id}}</td>
+            <td align="center">{{contentNova.3.binary}}</td>
+            <td align="center">{{contentNova.3.host}}</td>
+            <td align="center">{{contentNova.3.zone}}</td>
+            <td align="center">{{contentNova.3.status}}</td>
+            <td align="center">{{contentNova.3.state}}</td>
+            <td align="center">{{contentNova.3.updated_at}}</td>
+            <td align="center">{{contentNova.3.disabled_reason}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{contentNova.4.id}}</td>
+            <td align="center">{{contentNova.4.binary}}</td>
+            <td align="center">{{contentNova.4.host}}</td>
+            <td align="center">{{contentNova.4.zone}}</td>
+            <td align="center">{{contentNova.4.status}}</td>
+            <td align="center">{{contentNova.4.state}}</td>
+            <td align="center">{{contentNova.4.updated_at}}</td>
+            <td align="center">{{contentNova.4.disabled_reason}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{contentNova.5.id}}</td>
+            <td align="center">{{contentNova.5.binary}}</td>
+            <td align="center">{{contentNova.5.host}}</td>
+            <td align="center">{{contentNova.5.zone}}</td>
+            <td align="center">{{contentNova.5.status}}</td>
+            <td align="center">{{contentNova.5.state}}</td>
+            <td align="center">{{contentNova.5.updated_at}}</td>
+            <td align="center">{{contentNova.5.disabled_reason}}</td>
+        </tr>
+    </table>
+</body>
+</html>

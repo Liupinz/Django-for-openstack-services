@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Openstack云监控平台</title>
+</head>
+<body>
+    <form method="post" action="/login_check">
+        {% csrf_token %}
+        <label for="username">用户名:</label>
+        <input type="text" name="username" value="{{ username }}" id="username">
+        <br />
+        <br />
+        <label for="password">密&nbsp;&nbsp;&nbsp;码:</label>
+        <input type="password" name="password" value="{{ password }}" id="password">
+        <br />
+        <input type="checkbox" name="remember" id="remember"><label for="remember">记住用户名</label><br />
+        <div>
+            <input type="submit" name="" value="登录">
+        </div>
+    </form>
+</body>
+</html>
