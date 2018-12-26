@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>cloudip</title>
+</head>
+<body>
+    <form method="post" action="/clouddashboard">
+        {% csrf_token %}
+        <label for="cloudip">云平台IP:</label>
+        <input type="text" name="cloudip" id="cloudip">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

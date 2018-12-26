@@ -7,7 +7,23 @@
 <body>
     <a href="/login">首页</a>
 	<h1>openstack服务状态</h1>
-    nova服务状态为<br />
+    <b>基础服务状态为</b><br />
+    <table border="1" width="200" height="200" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>{{httpd_s}}</td>
+        </tr>
+        <tr>
+            <td>{{use}}</td>
+        </tr>
+        <tr>
+            <td>{{free_m}}</td>
+        </tr>
+        <tr>
+            <td>{{mariadb_s}}</td>
+        </tr>
+    </table>
+    <br />
+    <strong>nova服务状态为</strong><br />
     <!--{{ contentNova.0.id }}-->
     <table border="1" width="800" height="300" cellpadding="0" cellspacing="0">
         <tr>
@@ -79,6 +95,82 @@
             <td align="center">{{contentNova.5.state}}</td>
             <td align="center">{{contentNova.5.updated_at}}</td>
             <td align="center">{{contentNova.5.disabled_reason}}</td>
+        </tr>
+    </table>
+    <br />
+    <b>neutron服务状态为</b><br>
+    <table border="1" width="1000" height="300" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" width="30%">id</td>
+            <td align="center" width="20%">agent_type</td>
+            <td align="center" width="5%">host</td>
+            <td align="center" width="10%">availability_zone</td>
+            <td align="center" width="5%">alive</td>
+            <td align="center" width="10%">admin_state_up</td>
+            <td align="center" width="20%">binary</td>
+        </tr>
+        <tr>
+            <td align="center">{{neutron.0.id}}</td>
+            <td align="center">{{neutron.0.agent_type}}</td>
+            <td align="center">{{neutron.0.host}}</td>
+            <td align="center">{{neutron.0.availability_zone}}</td>
+            <td align="center">{{neutron.0.alive}}</td>
+            <td align="center">{{neutron.0.admin_state_up}}</td>
+            <td align="center">{{neutron.0.binary}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{neutron.1.id}}</td>
+            <td align="center">{{neutron.1.agent_type}}</td>
+            <td align="center">{{neutron.1.host}}</td>
+            <td align="center">{{neutron.1.availability_zone}}</td>
+            <td align="center">{{neutron.1.alive}}</td>
+            <td align="center">{{neutron.1.admin_state_up}}</td>
+            <td align="center">{{neutron.1.binary}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{neutron.2.id}}</td>
+            <td align="center">{{neutron.2.agent_type}}</td>
+            <td align="center">{{neutron.2.host}}</td>
+            <td align="center">{{neutron.2.availability_zone}}</td>
+            <td align="center">{{neutron.2.alive}}</td>
+            <td align="center">{{neutron.2.admin_state_up}}</td>
+            <td align="center">{{neutron.2.binary}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{neutron.3.id}}</td>
+            <td align="center">{{neutron.3.agent_type}}</td>
+            <td align="center">{{neutron.3.host}}</td>
+            <td align="center">{{neutron.3.availability_zone}}</td>
+            <td align="center">{{neutron.3.alive}}</td>
+            <td align="center">{{neutron.3.admin_state_up}}</td>
+            <td align="center">{{neutron.3.binary}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{neutron.4.id}}</td>
+            <td align="center">{{neutron.4.agent_type}}</td>
+            <td align="center">{{neutron.4.host}}</td>
+            <td align="center">{{neutron.4.availability_zone}}</td>
+            <td align="center">{{neutron.4.alive}}</td>
+            <td align="center">{{neutron.4.admin_state_up}}</td>
+            <td align="center">{{neutron.4.binary}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{neutron.5.id}}</td>
+            <td align="center">{{neutron.5.agent_type}}</td>
+            <td align="center">{{neutron.5.host}}</td>
+            <td align="center">{{neutron.5.availability_zone}}</td>
+            <td align="center">{{neutron.5.alive}}</td>
+            <td align="center">{{neutron.5.admin_state_up}}</td>
+            <td align="center">{{neutron.5.binary}}</td>
+        </tr>
+        <tr>
+            <td align="center">{{neutron.6.id}}</td>
+            <td align="center">{{neutron.6.agent_type}}</td>
+            <td align="center">{{neutron.6.host}}</td>
+            <td align="center">{{neutron.6.availability_zone}}</td>
+            <td align="center">{{neutron.6.alive}}</td>
+            <td align="center">{{neutron.6.admin_state_up}}</td>
+            <td align="center">{{neutron.6.binary}}</td>
         </tr>
     </table>
 </body>
