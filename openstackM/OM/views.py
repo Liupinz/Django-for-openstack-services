@@ -43,22 +43,22 @@ def login_check(request):
     else:
         return redirect('/login')
 
-@login_required
+
 def list_status(request):
     return render(request, 'OM/list_status.html')
 
-@login_required
+
 def cloudip(request):
     return render(request, 'OM/cloudip.html')
 
-@login_required
+
 def clouddashboard(request):
     cloudip = request.POST.get('cloudip')
     cloudip = "http://" + str(cloudip) + "/dashboard"
     print(cloudip)
     return render(request, 'OM/clouddashboard.html', {'cloudip': cloudip})
 
-@login_required
+
 def openstackStatus(request):
     httpd_status = subprocess.getoutput("systemctl status httpd | grep Active | awk '{print $2}'")
     httpd_s = "The http status is %s" % httpd_status
