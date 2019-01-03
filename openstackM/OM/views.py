@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.conf import settings
 from django.http import HttpResponse
 from OM.models import User
 import subprocess
@@ -58,6 +59,16 @@ def clouddashboard(request):
     print(cloudip)
     return render(request, 'OM/clouddashboard.html', {'cloudip': cloudip})
 
+def contact(request):
+    return render(request, 'OM/contact.html')
+
+def contact_handle(request):
+    comment = request.POST.get('comment')
+    fname = request.POST.get('fname')
+    save_path = "%s/%s.txt" % (settings.MESSAGE_ROOT, fname)
+    with open(save_path, 'w') as f:
+        f.write(comment)
+    return redirect('/login')
 
 def openstackStatus(request):
     httpd_status = subprocess.getoutput("systemctl status httpd | grep Active | awk '{print $2}'")
