@@ -10,5 +10,7 @@ urlpatterns = [
     url(r'^clouddashboard$', views.clouddashboard),
     url(r'^contact$', views.contact),
     url(r'^contact_handle$', views.contact_handle),
+    url(r'^register$', views.register),
+    url(r'^register_handle$', views.register_handle),
 
 ]

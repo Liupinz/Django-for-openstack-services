@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from OM import models
 from django.conf import settings
 from django.http import HttpResponse
 from OM.models import User
@@ -17,6 +18,7 @@ def login_required(view_func):
             return redirect('/login')
     return wrapper
 
+
 def login(request):
     # if request.session.has_key('islogin'):
     #     return redirect('/openstacks')
@@ -29,12 +31,13 @@ def login(request):
         password = ''
     return render(request, 'OM/login.html', {'username': username, 'password': password})
 
+
 def login_check(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
     remember = request.POST.get('remember')
-    user = User.objects.get(id=1)
-    if username == user.uname and password == user.upassword:
+    userResult = User.objects.filter(uname=username, upassword=password)
+    if (int(len(userResult)>0)):
         response = redirect('/list_status')
         if remember == 'on':
             response.set_cookie('username', username, max_age=7*24*3600)
@@ -59,8 +62,10 @@ def clouddashboard(request):
     print(cloudip)
     return render(request, 'OM/clouddashboard.html', {'cloudip': cloudip})
 
+
 def contact(request):
     return render(request, 'OM/contact.html')
+
 
 def contact_handle(request):
     comment = request.POST.get('comment')
@@ -69,6 +74,19 @@ def contact_handle(request):
     with open(save_path, 'w') as f:
         f.write(comment)
     return redirect('/login')
+
+
+def register(request):
+    return render(request, 'OM/register.html')
+
+
+def register_handle(request):
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+    user = User(uname=username, upassword=password)
+    user.save()
+    return redirect('/login')
+
 
 def openstackStatus(request):
     httpd_status = subprocess.getoutput("systemctl status httpd | grep Active | awk '{print $2}'")

@@ -595,3 +595,26 @@ http://172.16.53.249/dashboard
 [pid: 16731|app: 0|req: 5/13] 1.1.1.2 () {40 vars in 785 bytes} [Wed Jan  2 15:37:16 2019] GET /login => generated 988 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 291 bytes (1 switches on core 0)
 [pid: 16729|app: 0|req: 7/14] 1.1.1.2 () {48 vars in 939 bytes} [Wed Jan  2 15:37:26 2019] POST /login_check => generated 0 bytes in 17 msecs (HTTP/1.1 302) 6 headers in 293 bytes (1 switches on core 0)
 [pid: 16731|app: 0|req: 6/15] 1.1.1.2 () {42 vars in 872 bytes} [Wed Jan  2 15:37:26 2019] GET /list_status => generated 289 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 1)
+[pid: 16731|app: 0|req: 7/16] 10.51.20.175 () {38 vars in 811 bytes} [Mon Jan  7 01:48:53 2019] GET / => generated 0 bytes in 9 msecs (HTTP/1.1 302) 5 headers in 142 bytes (1 switches on core 0)
+[pid: 16731|app: 0|req: 8/17] 10.51.20.175 () {38 vars in 821 bytes} [Mon Jan  7 01:48:53 2019] GET /login => generated 988 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 291 bytes (1 switches on core 1)
+[pid: 16727|app: 0|req: 1/18] 10.51.20.175 () {38 vars in 811 bytes} [Mon Jan  7 01:49:06 2019] GET / => generated 0 bytes in 133 msecs (HTTP/1.1 302) 5 headers in 142 bytes (1 switches on core 0)
+[pid: 16731|app: 0|req: 9/19] 10.51.20.175 () {38 vars in 821 bytes} [Mon Jan  7 01:49:06 2019] GET /login => generated 988 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 291 bytes (1 switches on core 0)
+[pid: 16731|app: 0|req: 10/20] 10.51.20.175 () {38 vars in 827 bytes} [Mon Jan  7 01:50:26 2019] GET /login_tt => generated 0 bytes in 1 msecs (HTTP/1.1 302) 5 headers in 142 bytes (1 switches on core 1)
+[pid: 16731|app: 0|req: 11/21] 10.51.20.175 () {38 vars in 821 bytes} [Mon Jan  7 01:50:26 2019] GET /login => generated 988 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 291 bytes (1 switches on core 0)
+[pid: 16726|app: 0|req: 3/22] 10.51.20.175 () {38 vars in 831 bytes} [Mon Jan  7 01:50:35 2019] GET /login_xxxx => generated 0 bytes in 1 msecs (HTTP/1.1 302) 5 headers in 142 bytes (1 switches on core 0)
+[pid: 16731|app: 0|req: 12/23] 10.51.20.175 () {38 vars in 821 bytes} [Mon Jan  7 01:50:35 2019] GET /login => generated 988 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 291 bytes (1 switches on core 1)
+[pid: 16731|app: 0|req: 13/24] 10.51.20.175 () {38 vars in 821 bytes} [Mon Jan  7 02:18:30 2019] GET /login => generated 988 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 291 bytes (1 switches on core 0)
+[pid: 16729|app: 0|req: 8/25] 10.51.20.175 () {48 vars in 1022 bytes} [Mon Jan  7 02:18:59 2019] POST /login_check => generated 0 bytes in 15 msecs (HTTP/1.1 302) 6 headers in 293 bytes (1 switches on core 1)
+[pid: 16731|app: 0|req: 14/26] 10.51.20.175 () {42 vars in 955 bytes} [Mon Jan  7 02:18:59 2019] GET /list_status => generated 289 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 1)
+[pid: 16729|app: 0|req: 9/27] 10.51.20.175 () {38 vars in 883 bytes} [Mon Jan  7 02:19:03 2019] GET /list_status-xx => generated 88 bytes in 17 msecs (HTTP/1.1 404) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 16731|app: 0|req: 15/28] 10.51.20.175 () {38 vars in 875 bytes} [Mon Jan  7 02:20:02 2019] GET /list_statu => generated 84 bytes in 19 msecs (HTTP/1.1 404) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 16731|app: 0|req: 16/29] 10.51.20.175 () {40 vars in 914 bytes} [Mon Jan  7 02:27:45 2019] GET /list_status-xx => generated 88 bytes in 17 msecs (HTTP/1.1 404) 4 headers in 114 bytes (1 switches on core 1)
+[pid: 16731|app: 0|req: 17/30] 10.51.20.175 () {38 vars in 865 bytes} [Mon Jan  7 02:27:50 2019] GET /login => generated 988 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 291 bytes (1 switches on core 0)
+[pid: 16731|app: 0|req: 18/31] 10.51.20.175 () {40 vars in 896 bytes} [Mon Jan  7 02:27:52 2019] GET /login => generated 988 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 291 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 16734)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
