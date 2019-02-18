@@ -3,6 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>openstack服务状态</title>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            setInterval(function () {
+                $("#refresh").load("openstacks");  /* 每过一秒刷新一次/openstack 页面*/
+            }, 1000);
+        });
+    </script>
 </head>
 <body>
     <a href="/login">首页</a>
@@ -25,6 +33,7 @@
     <br />
     <strong>nova服务状态为</strong><br />
     <!--{{ contentNova.0.id }}-->
+    <div id="refresh">
     <table border="1" width="800" height="300" cellpadding="0" cellspacing="0">
         <tr>
             <td width="5%" align="center">Id</td>
@@ -173,5 +182,6 @@
             <td align="center">{{neutron.6.binary}}</td>
         </tr>
     </table>
+    </div>
 </body>
 </html>

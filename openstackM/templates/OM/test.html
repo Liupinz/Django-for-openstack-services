@@ -1,27 +1,25 @@
-<!--{% extends 'OM/base.html' %}-->
-
-<!--{% block title %}注册{% endblock %}-->
-
-<!--{% block js %}-->
-    <!--function formCheck() {-->
-        <!--if(pwd1.value != pwd2.value){-->
-            <!--alert("两次输入的密码不一致!");-->
-            <!--pwd1.value = "";-->
-            <!--pwd2.value = "";-->
-        <!--}-->
-    <!--}-->
-<!--{% endblock %}-->
-
-<!--{% block content %}-->
-    <!--<h2>用户注册</h2>-->
-    <!--<form method="post" action="#">-->
-    <!--{% csrf_token %}-->
-        <!--用户名: <input type="text" name="username"><br />-->
-        <!--<br />-->
-        <!--密&nbsp;&nbsp;&nbsp;码: <input type="password" name="password" id="pwd1"><br />-->
-        <!--<br />-->
-        <!--重复密码: <input type="password" name="passwordconfirm" id="pwd2"><br />-->
-        <!--<br />-->
-        <!--<input type="submit" name="" value="提交">-->
-    <!--</form>-->
-<!--{% endblock %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>openstack服务状态</title>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            setInterval(function () {
+                $("#refresh").load("openstacks");
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <div id="refresh">
+        <div>{{contentNova.0.state}}</div>
+        <div>{{contentNova.1.state}}</div>
+        <div>{{contentNova.2.state}}</div>
+        <div>{{contentNova.3.state}}</div>
+        <div>{{contentNova.4.state}}</div>
+        <div>{{contentNova.5.state}}</div>
+    </div>
+</body>
+</html>

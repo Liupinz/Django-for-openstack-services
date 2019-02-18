@@ -113,6 +113,7 @@ def openstackStatus(request):
     nova_services = r1_service.json()['services']
     r2_service = requests.get('http://controller:9696/v2.0/agents.json', headers={'X-Auth-Token': token})
     neutron_status = r2_service.json()['agents']
+
     content = {
         'httpd_s': httpd_s,
         'use': use,
@@ -121,4 +122,7 @@ def openstackStatus(request):
         'contentNova': nova_services,
         'neutron': neutron_status
     }
+    # content = {
+    #     'contentNova': nova_services
+    # }
     return render(request, 'OM/status.html', content)
